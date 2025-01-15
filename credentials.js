@@ -1,2 +1,2 @@
-const VALID_USERNAME = 'AP526';
-const VALID_PASSWORD = '526';
+const VALID_USERNAME = 'ap526';
+const VALID_PASSWORD = '5621';

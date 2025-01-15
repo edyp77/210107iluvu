@@ -2,63 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>210107</title>
-    <style>
-        /* Resetowanie stylów */
-        body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif; /* Minimalistyczna, bold czcionka */
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>210107</title>
+<style>
+    /* Resetowanie stylów */
+    body, html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
 
-        /* Stylizacja całej strony */
-        body {
-            background-color: #121212;
-            color: #f0f0f0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Wyrównanie od góry */
-            align-items: center;
-            height: auto;
-            overflow-y: auto;
-            text-align: center;
-            padding-top: 40px; /* Większy odstęp od góry */
-        }
+    /* Stylizacja całej strony */
+    body {
+        background-color: #121212;
+        color: #f0f0f0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Wyrównanie od góry */
+        align-items: center;
+        height: auto;
+        overflow-y: auto;
+        text-align: center;
+        padding-top: 40px; /* Większy odstęp od góry */
+    }
 
-        /* Górna nawigacja */
-        .navigation {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            background-color: #1e1e1e;
-            padding: 1rem; /* Powiększony padding */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Większy cień */
-            position: fixed;
-            top: 0;
-            left: 0;
-            gap: 1rem; /* Zwiększone odstępy */
-            z-index: 100;
-        }
+    /* Górna nawigacja */
+    .navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #1e1e1e;
+        padding: 1rem; /* Powiększony padding */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Większy cień */
+        position: fixed;
+        top: 0;
+        left: 0;
+        gap: 1rem; /* Zwiększone odstępy */
+    }
 
-        .navigation button {
-            background-color: #2b2b2b;
-            color: #f0f0f0;
-            border: none;
-            padding: 1rem 1.5rem; /* Powiększone przyciski */
-            border-radius: 10px; /* Większe zaokrąglenie */
-            font-size: 1.8rem; /* Powiększona czcionka */
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+    .navigation button {
+        background-color: #2b2b2b;
+        color: #f0f0f0;
+        border: none;
+        padding: 1rem 1.5rem; /* Powiększone przyciski */
+        border-radius: 10px; /* Większe zaokrąglenie */
+        font-size: 1.8rem; /* Powiększona czcionka */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
 
-        .navigation button.flowers-button {
-            background-color: #974dff;
-            color: #f0f0f0;
-        }
+    .navigation button.flowers-button {
+        background-color: #974dff;
+        color: #f0f0f0;
+    }
 
         /* Sekcja z obrazkami */
         .gallery {

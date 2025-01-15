@@ -28,24 +28,25 @@ body {
 .navigation {
     width: 100%;
     display: flex;
-    justify-content: center; /* Główne centrowanie w poziomie */
+    justify-content: center; /* Centrowanie w poziomie */
     align-items: center; /* Centrowanie w pionie */
     background-color: #1e1e1e;
-    padding: 1rem 0; /* Padding tylko pionowy */
+    padding: 1rem 0; /* Ustawienie paddingu pionowego */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     left: 0;
+    gap: 1rem; /* Odstęp między przyciskami (zmieniony na taki sam jak w podanym przykładzie) */
     box-sizing: border-box;
 }
 
-/* Przyciski */
+/* Stylizacja przycisków */
 .navigation button {
     background-color: #2b2b2b;
     color: #f0f0f0;
     border: none;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
+    padding: 1rem 1.5rem; /* Zwiększony padding dla większych przycisków */
+    border-radius: 10px; /* Zaokrąglone rogi */
     font-size: 1.8rem;
     font-weight: bold;
     cursor: pointer;
@@ -57,20 +58,19 @@ body {
     color: #f0f0f0;
 }
 
-.navigation button.flowers-button,
-.navigation button.dictionary-button {
-    background-color: #2b2b2b;
-    color: #f0f0f0;
+/* Responsywność */
+@media (max-width: 768px) {
+    .navigation button {
+        padding: 1rem 1rem; /* Zmniejszony padding na mniejszych ekranach */
+        font-size: 1.4rem; /* Zmniejszona czcionka */
+    }
 }
 
-/* Stylizacja dla iframe */
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-    width: 100%;
-    flex-grow: 1;
+@media (max-width: 480px) {
+    .navigation button {
+        padding: 1rem 1rem; /* Zmniejszony padding */
+        font-size: 1.2rem; /* Mniejsza czcionka */
+    }
 }
 
 iframe {

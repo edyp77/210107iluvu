@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Navigation</title>
+    <style>
+        /* Resetowanie stylów */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Stylizacja całej strony */
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Górna nawigacja */
+        .navigation {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #1e1e1e;
+            padding: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            gap: 1rem;
+        }
+
+        .navigation button {
+            background-color: #2b2b2b;
+            color: #f0f0f0;
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .navigation button.movie-button {
+            background-color: #974dff;
+            color: #f0f0f0;
+        }
+
+        .navigation button.flowers-button {
+            background-color: #2b2b2b;
+            color: #f0f0f0;
+        }
+
+        .navigation button.dictionary-button {
+            background-color: #2b2b2b;
+            color: #f0f0f0;
+        }
+
+        /* Stylizacja dla obrazka w lewym górnym rogu */
+        .top-left-image {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 100px;
+            width: auto;
+            z-index: 1000;
+        }
+
+        /* Stylizacja dla iframe z filmem */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px; /* Odsunięcie od nawigacji */
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        iframe {
+            width: 95%;
+            max-width: 1600px;
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .navigation button {
+                padding: 1rem;
+                font-size: 1.4rem;
+            }
+
+            iframe {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navigation button {
+                padding: 1rem;
+                font-size: 1.2rem;
+            }
+
+            iframe {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="navigation">
+        <button class="flowers-button" onclick="location.href='./flowers.html'">kwiaty</button>
+        <button class="movie-button" onclick="location.href='./main.html'">MP4</button>
+        <button class="dictionary-button" onclick="location.href='./dictionary.html'">słownik</button>
+    </div>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/-9xgX-5bop8?si=qCiVCjHHjLfBW61N" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>
+

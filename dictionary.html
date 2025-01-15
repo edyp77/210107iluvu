@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>210107</title>
+<style>
+    /* Resetowanie stylów */
+    body, html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Stylizacja całej strony */
+    body {
+        background-color: #121212;
+        color: #f0f0f0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Wyrównanie od góry */
+        align-items: center;
+        height: auto;
+        overflow-y: auto;
+        text-align: center;
+        padding-top: 40px; /* Większy odstęp od góry */
+    }
+
+    /* Górna nawigacja */
+    .navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #1e1e1e;
+        padding: 1rem; /* Powiększony padding */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Większy cień */
+        position: fixed;
+        top: 0;
+        left: 0;
+        gap: 1rem; /* Zwiększone odstępy */
+    }
+
+    .navigation button {
+        background-color: #2b2b2b;
+        color: #f0f0f0;
+        border: none;
+        padding: 1rem 1.5rem; /* Powiększone przyciski */
+        border-radius: 10px; /* Większe zaokrąglenie */
+        font-size: 1.8rem; /* Powiększona czcionka */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .navigation button.dictionary-button {
+        background-color: #974dff;
+        color: #f0f0f0;
+    }
+
+    /* Dodanie tekstu */
+    .text-content {
+        font-size: 2rem;  /* Powiększona wielkość czcionki */
+        font-weight: bold;
+        line-height: 2.4rem; /* Większy odstęp między wierszami */
+        letter-spacing: 0.04rem;
+        word-spacing: -0.1rem;
+        margin-top: 100px; /* Większa przestrzeń między nawigacją a tekstem */
+    }
+
+    /* Responsywność */
+    @media (max-width: 768px) {
+        .navigation button {
+            padding: 1rem 1rem;
+            font-size: 1.4rem; /* Większa czcionka na mniejszych ekranach */
+        }
+        .text-content {
+            font-size: 1.6rem;  /* Zmniejszenie czcionki na mniejszych ekranach */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navigation button {
+            padding: 1rem 1rem;
+            font-size: 1.2rem; /* Zmniejszona czcionka na jeszcze mniejszych ekranach */
+        }
+        .text-content {
+            font-size: 1.4rem;  /* Mniejsza czcionka na małych ekranach */
+        }
+    }
+</style>
+
+</head>
+<body>
+    <div class="navigation">
+        <button class="flowers-button" onclick="location.href='./flowers.html'">kwiaty</button>
+        <button class="movie-button" onclick="location.href='./main.html'">MP4</button>
+        <button class="dictionary-button" onclick="location.href='./dictionary.html'">słownik</button>
+    </div>
+
+    <div class="text-content">
+        <p>buja</p>
+        <p>starbucks</p>
+        <p>kurcze felek</p>
+        <p>zakazane slowo</p>
+        <p>ser io slay</p>
+        <p>miski parapet</p>
+        <p>agresor</p>
+        <p>cwaniak przegryw pilot</p>
+        <p>lawka w parku</p>
+        <p>sfinks edyp</p>
+        <p>madrala</p>
+        <p>nie chce mi sie</p>
+        <p>elo zelo</p>
+        <p>opium boy</p>
+        <p>deszcz na betonie</p>
+        <p>beka</p>
+        <p>konie sie smieja</p>
+        <p>jak ty cos powiesz</p>
+        <p>spaghetti kundel</p>
+        <p>nozki smiech</p>
+        <p>pinokio</p>
+        <p>karty</p>
+        <p>buka</p>
+        <p>szczota</p>
+        <p>piesek</p>
+        <p>rozciaganie rano</p>
+        <p>zuzu pets</p>
+        <p>aniolki</p>
+        <p>😋🤟</p>
+        <p>meh</p>
+        <p>jump arena</p>
+        <p>fąfolic</p>
+        <p>piona z pistoletem</p>
+        <p>zolwik</p>
+        <p>plucie lapanie</p>
+        <p>gra w lapki</p>
+        <p>pff debil</p>
+        <p>mina parskniecie</p>
+        <p>wata cukrowa</p>
+        <p>pingwinki</p>
+        <p>pazur</p>
+        <p>czyscich itd cykor no schowaj</p>
+        <p>1b siodemka 09</p>
+        <p>poznan glowny 16</p>
+        <p>smianie sie moje</p>
+        <p>dni parzyste i nieparzyste</p>
+        <p>nocka w burgerach</p>
+        <p>komik mama jak ty cos powiesz</p>
+        <p>pies zakaz wchodzenia</p>
+        <p>sztywniak</p>
+        <p>rudolini</p>
+        <p>niebo usmiech</p>
+        <p>gwizdanie wspolne</p>
+        <p>ubezpieczenia rower</p>
+        <p>smash bob</p>
+        <p>😸</p>
+        <p>swierszcze</p>
+        <p>rece krem</p>
+        <p>koszulka brudna</p>
+        <p>haker msp</p>
+        <p>rozyczka</p>
+        <p>debil</p>
+        <p>kanal yt edyp i sfinks</p>
+        <p>stoisko bobry mlotek</p>
+        <p>lody smerf</p>
+        <p>ziewanie</p>
+        <p>fanklub itd</p>
+        <p>cicho siedz</p>
+        <p>slodko gorzko</p>
+        <p>slepy antek</p>
+        <p>selfie inteligentne</p>
+        <p>lapa sfinksa</p>
+        <p>pazur</p>
+        <p>czas stop</p>
+        <p>jedno ucho male drugie duze</p>
+        <p>pikachu</p>
+        <p>diabel demon</p>
+        <p>slepy ignacy lawka</p>
+        <p>liczenie demonow wlosy</p>
+        <p>babka knajpa drinki kaczki etc</p>
+        <p>odpusc</p>
+        <p>nie ma takiej ksiazki</p>
+        <p>aresztowanie kradziez</p>
+        <p>godzina duchow</p>
+        <p>czuly</p>
+        <p>20 dni 👀</p>
+        <p>13 letnia ja 🤒🤒🤒 spadajaca gwiazda</p>
+        <p>szitsu szitsu</p>
+        <p>elvis</p>
+        <p>8 miliardów</p>
+        <p>uciekaj poszukiwany poszukiwana ranking</p>
+        <p>psia kosc kurza stopa</p>
+        <p>zlot czerwonych aut</p>
+        <p>minionki</p>
+        <p>teatr sfinksa</p>
+        <p>lod</p>
+        <p>ja jestem ...</p>
+        <p>🔐25</p>
+        <p>7 rodzial cytat</p>
+        <p>baby blue movie</p>
+        <p>konopnicka ludzie po jednym skrzydle</p>
+        <p>pelna zycia</p>
+        <p>nasza szyja 50/50</p>
+        <p>miecze jedi</p>
+        <p>wata cukrowa</p>
+        <p>madralinska</p>
+        <p>friz nienawidzi wersow multi</p>
+        <p>przemyslaw baranowo</p>
+        <p>market amerykanski</p>
+        <p>kubek zombiak swatka ja ona</p>
+        <p>listopad z tb niz lipiec bez</p>
+        <p>fest</p>
+        <p>couple goals</p>
+        <p>najcudowniejszy</p>
+        <p>wattpad majczi</p>
+        <p>kozik (cwel)</p>
+        <p>prosze daj mi pizze</p>
+        <p>zolw</p>
+        <p>jesieniary</p>
+        <p>skarb gdzie sie modliles</p>
+        <p>nie umiem odmawiac</p>
+        <p>typ chlopaka</p>
+        <p>filmowe chwile</p>
+        <p>edyp szare dno</p>
+        <p>moja dziewczyna</p>
+        <p>deszcz park</p>
+        <p>czy travis scott to opium</p>
+        <p>mis gogo, mr photo, sam bym na to poszedl</p>
+        <p>patrz suchutka</p>
+        <p>wifey material babcia</p>
+        <p>szitsu.pl</p>
+        <p>moimi oczami</p>
+        <p>oswojony lisek</p>
+        <p>okkkej</p>
+        <p>niesmak motor</p>
+        <p>ostatnie 24h🤕</p>
+        <p>szczescie</p>
+        <p>magiczne</p>
+        <p>dworek vs rod</p>
+        <p>hustawka drzewo</p>
+        <p>glosowka</p>
+        <p>ksiezniczka</p>
+        <p>vigo cieknaca slina</p>
+        <p>myszka</p>
+        <p>predator</p>
+        <p>panowie z fb</p>
+        <p>mysterious/oczywista</p>
+        <p>jestes taki smieszny</p>
+        <p>auto lezenie</p>
+        <p>moj bobr dostal goraczki</p>
+        <p>thomasek</p>
+        <p>sus</p>
+        <p>cela po zlapaniu przez panow z fb</p>
+        <p>jasiu moment</p>
+        <p>chrupki</p>
+        <p>kwa kwa</p>
+        <p>eryk</p>
+        <p>nie mam pepka</p>
+        <p>poszukiwanie tygrysa</p>
+        <p>zagrozenie</p>
+        <text>I <3 U </text>
+            <p>   </p>
+            <p>   </p>
+

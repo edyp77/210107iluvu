@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>210107</title>
+    <style>
+        /* Resetowanie stylów */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif; /* Minimalistyczna, bold czcionka */
+        }
+
+        /* Stylizacja całej strony */
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Górna nawigacja */
+        .navigation {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #1e1e1e;
+            padding: 1rem; /* Powiększony padding */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Większy cień */
+            position: fixed;
+            top: 0;
+            left: 0;
+            gap: 1rem; /* Zwiększone odstępy */
+            z-index: 100;
+        }
+
+        .navigation button {
+            background-color: #2b2b2b;
+            color: #f0f0f0;
+            border: none;
+            padding: 1rem 1.5rem; /* Powiększone przyciski */
+            border-radius: 10px; /* Większe zaokrąglenie */
+            font-size: 1.8rem; /* Powiększona czcionka */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .navigation button.flowers-button {
+            background-color: #974dff;
+            color: #f0f0f0;
+        }
+
+        /* Sekcja z obrazkami */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Zwiększone kolumny */
+            gap: 2rem; /* Większy odstęp między zdjęciami */
+            padding-top: 120px; /* Większy odstęp od góry */
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 80px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Większe zaokrąglenie */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Większy cień */
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1); /* Większe powiększenie zdjęć przy najechaniu */
+        }
+
+        /* Stylizacja powiększonego obrazu */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            z-index: 200;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .overlay.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .navigation button {
+                padding: 1rem 1rem;
+                font-size: 1.5rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Mniejsze kolumny na mniejszych ekranach */
+                padding-top: 100px; /* Mniejszy odstęp na małych ekranach */
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navigation button {
+                font-size: 1.3rem;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = img.src;
+            modal.classList.add('visible');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('visible');
+        }
+    </script>
+</head>
+<body>
+    <div class="navigation">
+        <button class="flowers-button" onclick="location.href='./flowers.html'">kwiaty</button>
+        <button class="movie-button" onclick="location.href='./main.html'">MP4</button>
+        <button class="dictionary-button" onclick="location.href='./dictionary.html'">słownik</button>
+    </div>
+
+    <div class="gallery">
+        <img src="./flowers_jpg/IMG_0039.JPEG" alt="Flower 2" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0074.JPEG" alt="Flower 3" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0101.JPEG" alt="Flower 4" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0272.JPEG" alt="Flower 5" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0390.JPEG" alt="Flower 6" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0493.JPEG" alt="Flower 7" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0535.JPEG" alt="Flower 8" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0551.JPEG" alt="Flower 9" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0666.JPEG" alt="Flower 10" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0676.JPEG" alt="Flower 11" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0698.JPEG" alt="Flower 12" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0853.JPEG" alt="Flower 13" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0878.JPEG" alt="Flower 14" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0925.JPEG" alt="Flower 15" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_0980.JPEG" alt="Flower 16" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_5243.JPEG" alt="Flower 17" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_5494.JPEG" alt="Flower 18" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_5637.JPEG" alt="Flower 19" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_5646.JPEG" alt="Flower 20" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_5691.JPEG" alt="Flower 21" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_5802.JPEG" alt="Flower 22" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_5947.JPEG" alt="Flower 23" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_6006.JPEG" alt="Flower 24" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_6520.JPEG" alt="Flower 25" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_6549.JPEG" alt="Flower 26" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_6582.JPEG" alt="Flower 27" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_6609.JPEG" alt="Flower 28" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_7084.JPEG" alt="Flower 29" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_7538.JPEG" alt="Flower 30" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_7564.JPEG" alt="Flower 31" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_7631.JPEG" alt="Flower 32" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_7796.JPEG" alt="Flower 33" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_7828.JPEG" alt="Flower 34" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8013.JPEG" alt="Flower 35" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8038.JPEG" alt="Flower 36" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8055.JPEG" alt="Flower 37" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8390.JPEG" alt="Flower 38" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8420.JPEG" alt="Flower 39" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8535.JPEG" alt="Flower 40" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8674.JPEG" alt="Flower 41" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8835.JPEG" alt="Flower 42" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8984.JPEG" alt="Flower 43" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_8990.JPEG" alt="Flower 44" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_9240.JPEG" alt="Flower 45" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_9273.JPEG" alt="Flower 46" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_9348.JPEG" alt="Flower 47" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_9381.JPEG" alt="Flower 48" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_9437.JPG" alt="Flower 49" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_9521.JPEG" alt="Flower 50" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_9564.JPEG" alt="Flower 51" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_9624.JPEG" alt="Flower 52" onclick="openModal(this)">
+        <img src="./flowers_jpg/IMG_9727.JPEG" alt="Flower 53" onclick="openModal(this)">
+    </div>
+
+    <!-- Modal z obrazem -->
+    <div class="overlay" id="imageModal" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Expanded View">
+    </div>
+</body>
+</html>

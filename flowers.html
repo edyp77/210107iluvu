@@ -114,11 +114,25 @@
         }
 
         /* Responsywność */
-        @media (max-width: 768px) {
-            .navigation button {
+          @media (max-width: 768px) {
+        .navigation button {
+            padding: 1rem 1rem;
+            font-size: 1.4rem; /* Większa czcionka na mniejszych ekranach */
+        }
+        .text-content {
+            font-size: 1.6rem;  /* Zmniejszenie czcionki na mniejszych ekranach */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navigation button {
             padding: 1rem 1rem;
             font-size: 1.2rem; /* Zmniejszona czcionka na jeszcze mniejszych ekranach */
-            }
+        }
+        .text-content {
+            font-size: 1.4rem;  /* Mniejsza czcionka na małych ekranach */
+        }
+    }
 
             .gallery {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Mniejsze kolumny na mniejszych ekranach */
